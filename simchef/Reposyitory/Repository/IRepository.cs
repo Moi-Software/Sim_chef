@@ -5,9 +5,10 @@ namespace simchef.Repository
 {
 public Interface IRepository<T> : class
 {
-ActionResult<T> Get(T t;
-ActionResult<T> Post(T t;
-ActionResult<T> Put(T t);
-ActionResult<T> Delete(T t);
+IEnumerable Get_all();
+IEnumerable Get_id(int id);
+bool Insert(T obj);
+bool Update(T obj);
+bool Delete(T obj);
 }
 }
