@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using simchef.Models;
 
 namespace simchef.Controllers
 {
@@ -33,8 +34,10 @@ namespace simchef.Controllers
 
     // POST api/values
     [HttpPost]
-    public void Post([FromBody] string value)
+    public ActionResult<UrlNota> Post(UrlNota urlNota)
     {
+      urlNota.data_cadastro = DateTime.Today;
+      return CreatedAtAction(nameof(urlNota), urlNota);
     }
 
     // PUT api/values/5

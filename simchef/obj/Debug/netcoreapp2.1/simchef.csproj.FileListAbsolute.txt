@@ -12,3 +12,17 @@ C:\Users\tmilitino\Desktop\teste_dotnet\simchef\obj\Debug\netcoreapp2.1\simchef.
 C:\Users\tmilitino\Desktop\teste_dotnet\simchef\obj\Debug\netcoreapp2.1\simchef.RazorTargetAssemblyInfo.cache
 C:\Users\tmilitino\Desktop\teste_dotnet\simchef\obj\Debug\netcoreapp2.1\simchef.dll
 C:\Users\tmilitino\Desktop\teste_dotnet\simchef\obj\Debug\netcoreapp2.1\simchef.pdb
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\bin\Debug\netcoreapp2.1\simchef.deps.json
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\bin\Debug\netcoreapp2.1\simchef.runtimeconfig.json
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\bin\Debug\netcoreapp2.1\simchef.runtimeconfig.dev.json
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\bin\Debug\netcoreapp2.1\simchef.dll
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\bin\Debug\netcoreapp2.1\simchef.pdb
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.csprojAssemblyReference.cache
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.csproj.CoreCompileInputs.cache
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.RazorAssemblyInfo.cache
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.RazorAssemblyInfo.cs
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.AssemblyInfoInputs.cache
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.AssemblyInfo.cs
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.RazorTargetAssemblyInfo.cache
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.dll
+C:\Users\tmilitino\Documents\GitHub\Sim_chef\simchef\obj\Debug\netcoreapp2.1\simchef.pdb

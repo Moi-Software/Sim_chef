@@ -11982,11 +11982,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tmilitino\\Desktop\\teste_dotnet\\simchef\\simchef.csproj",
+      "projectUniqueName": "C:\\Users\\tmilitino\\Documents\\GitHub\\Sim_chef\\simchef\\simchef.csproj",
       "projectName": "simchef",
-      "projectPath": "C:\\Users\\tmilitino\\Desktop\\teste_dotnet\\simchef\\simchef.csproj",
+      "projectPath": "C:\\Users\\tmilitino\\Documents\\GitHub\\Sim_chef\\simchef\\simchef.csproj",
       "packagesPath": "C:\\Users\\tmilitino\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tmilitino\\Desktop\\teste_dotnet\\simchef\\obj\\",
+      "outputPath": "C:\\Users\\tmilitino\\Documents\\GitHub\\Sim_chef\\simchef\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
