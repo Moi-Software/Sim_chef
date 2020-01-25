@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace simchef.Repository
 {
-  interface IRepository<T>
+ public interface IRepository<T>
   {
     IEnumerable GetAll();
     IEnumerable GetId(int id);

@@ -34,7 +34,9 @@ namespace simchef
       services.AddDbContext<ConectionContest>((optionsBuilder) =>{
       optionsBuilder.UseNpgsql(connection_string);
       });
-      services.AddScoped(typeof(IRepository<UrlNota>), typeof(RepositoryUrlNota));
+      
+      services.AddScoped<IRepositoryUrlNota, RepositoryUrlNota>();
+      services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,9 +14,9 @@ namespace simchef.Controllers
   
   public class UrlNotaController : ControllerBase
   {
-    private readonly RepositoryUrlNota _repository;
+    private readonly IRepositoryUrlNota _repository;
 
-    public UrlNotaController(RepositoryUrlNota reposyitory)
+    public UrlNotaController(IRepositoryUrlNota reposyitory)
     {
       _repository = reposyitory;
     }

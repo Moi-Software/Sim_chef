@@ -4,13 +4,12 @@ using simchef.Models;
 
 namespace simchef.Repository
 {
-  public class RepositoryUrlNota : IRepository<UrlNota>
+  public class RepositoryUrlNota: IRepositoryUrlNota
   {
-    private readonly ConectionContest _conection;
-
-    public RepositoryUrlNota(ConectionContest conection)
+    private IRepository<UrlNota> _repository;
+    public RepositoryUrlNota(IRepository<UrlNota> reposyitory)
     {
-      _conection = conection;
+      _repository = reposyitory;
     }
 
     public bool Delete(UrlNota obj)
@@ -30,13 +29,9 @@ namespace simchef.Repository
 
     public bool Insert(UrlNota obj)
     {
-      using (var conn = _conection)
-      {
-        conn.Add(obj);
-        conn.SaveChanges();
-        return true;
-      }
+      return _repository.Insert(obj);
     }
+
     public bool Update(UrlNota obj)
     {
       throw new System.NotImplementedException();
