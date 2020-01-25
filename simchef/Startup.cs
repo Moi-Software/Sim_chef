@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using simchef.DataAcess;
+using simchef.Models;
+using simchef.Repository;
 
 namespace simchef
 {
@@ -32,6 +34,7 @@ namespace simchef
       services.AddDbContext<ConectionContest>((optionsBuilder) =>{
       optionsBuilder.UseNpgsql(connection_string);
       });
+      services.AddScoped(typeof(IRepository<UrlNota>), typeof(RepositoryUrlNota));
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

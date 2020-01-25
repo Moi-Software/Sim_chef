@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using simchef.DataAcess;
 using simchef.Models;
+using simchef.Repository;
 
 namespace simchef.Controllers
 {
   [Route("api_v1/[controller]")]
   [ApiController]
+  
   public class UrlNotaController : ControllerBase
   {
+    private readonly RepositoryUrlNota _repository;
+
+    public UrlNotaController(RepositoryUrlNota reposyitory)
+    {
+      _repository = reposyitory;
+    }
+
+
     // GET api/values
     [HttpGet]
     public ActionResult<IEnumerable<string>> Get()
@@ -37,6 +48,7 @@ namespace simchef.Controllers
     public ActionResult<UrlNota> Post(UrlNota urlNota)
     {
       urlNota.data_cadastro = DateTime.Today;
+      _repository.Insert(urlNota);
       return CreatedAtAction(nameof(urlNota), urlNota);
     }
 
