@@ -1,3 +1,5 @@
+﻿
+
 using System.Collections;
 using System.Threading.Tasks;
 using simchef.DataAcess;
@@ -5,15 +7,19 @@ using simchef.Models;
 
 namespace simchef.Repository
 {
-  public class RepositoryUrlNota: IRepository<UrlNota>
+
+
+  public class RepositoryProdutos : IRepository<Produtos>
   {
-    private IRepository<UrlNota> _repository;
-    public RepositoryUrlNota(IRepository<UrlNota> reposyitory)
+
+    private IRepository<Produtos> _repository;
+
+    public RepositoryProdutos(IRepository<Produtos> reposyitory)
     {
       _repository = reposyitory;
     }
 
-    public bool Delete(UrlNota obj)
+    public bool Delete(Produtos obj)
     {
       throw new System.NotImplementedException();
     }
@@ -28,7 +34,7 @@ namespace simchef.Repository
       throw new System.NotImplementedException();
     }
 
-    public async Task<bool> Insert(UrlNota obj)
+    public async Task<bool> Insert(Produtos obj)
     {
       var resp = await _repository.Insert(obj);
 
@@ -36,10 +42,9 @@ namespace simchef.Repository
       return await task;
     }
 
-    public bool Update(UrlNota obj)
+    public bool Update(Produtos obj)
     {
       throw new System.NotImplementedException();
     }
   }
 }
-

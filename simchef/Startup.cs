@@ -35,7 +35,7 @@ namespace simchef
       optionsBuilder.UseNpgsql(connection_string);
       });
       
-      services.AddScoped<IRepositoryUrlNota, RepositoryUrlNota>();
+      // services.AddScoped<IRepository<UrlNota>, RepositoryUrlNota>();
       services.AddScoped(typeof(IRepository<>), typeof(RepositoryBase<>));
     }
 

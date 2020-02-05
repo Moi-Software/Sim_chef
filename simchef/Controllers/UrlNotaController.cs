@@ -16,11 +16,13 @@ namespace simchef.Controllers
 
   public class UrlNotaController : ControllerBase
   {
-    private readonly IRepositoryUrlNota _repository;
+    private readonly IRepository<UrlNota> _repositoryUrl;
+    private readonly IRepository<Produtos> _repositoryProdutos;
 
-    public UrlNotaController(IRepositoryUrlNota reposyitory)
+    public UrlNotaController(IRepository<UrlNota> repositoryUrl, IRepository<Produtos> repositoryProdutos)
     {
-      _repository = reposyitory;
+      _repositoryUrl = repositoryUrl;
+      _repositoryProdutos = repositoryProdutos;
     }
 
 
@@ -47,9 +49,9 @@ namespace simchef.Controllers
 
     // POST api/values
     [HttpPost]
-    public ActionResult<UrlNota> Post(UrlNota urlNota)
+    public async Task<ActionResult<UrlNota>> Post(UrlNota urlNota)
     {
-      urlNota.id = 3;
+      urlNota.id = 8;
       urlNota.id_nota = urlNota.url_nota.Split("=")[1].Split("|")[0];
 
       var client = new RestClient(urlNota.url_nota);
@@ -58,16 +60,29 @@ namespace simchef.Controllers
       IRestResponse response = client.Execute(request);
       if (response.IsSuccessful)
       {
-        XDocument xDocument = XDocument.Parse(response.Content);
-        IEnumerable<XElement> contatos = from c in xDocument.Descendants("nfeProc") select c;
-        foreach(XElement contato in contatos){
 
-        Console.WriteLine(contato.Element("dataHora"));
+        XDocument xDocument = XDocument.Parse(response.Content);
+
+        IEnumerable<XElement> contatos = from c in xDocument.Elements() select c;
+        foreach (XElement contato in contatos)
+        {
+
+          Console.WriteLine(contato);
         }
 
 
         urlNota.data_cadastro = DateTime.Today;
-        _repository.Insert(urlNota);
+        var retorno = await _repositoryUrl.Insert(urlNota);
+        if (retorno == true)
+        {
+          // return Ok();
+          return new ObjectResult(retorno) { StatusCode = 200 };
+        }
+        else
+        {
+
+          return new ObjectResult(retorno) { StatusCode = 500 };
+        }
       }
       return CreatedAtAction(nameof(UrlNota), urlNota);
     }

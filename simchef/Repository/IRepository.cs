@@ -1,13 +1,16 @@
 using System.Collections;
+using System.Threading.Tasks;
+using simchef.Models;
 
 namespace simchef.Repository
 {
- public interface IRepository<T>
+  public interface IRepository<T>
   {
     IEnumerable GetAll();
     IEnumerable GetId(int id);
-    bool Insert(T obj);
+   Task<bool> Insert(T obj);
     bool Update(T obj);
     bool Delete(T obj);
+
   }
 }
